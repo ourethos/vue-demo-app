@@ -6,8 +6,8 @@ module.exports = {
     data: function() {
         return {
             messages: [
-                {id: 3, title: "Message One", content: "Content One" },
-                {id: 4, title: "Message Two", content: "Content Two" }
+                {id: 3, title: "Message One", content: "Content One", read: false },
+                {id: 4, title: "Message Two", content: "Content Two", read: false }
             ], 
             selectedMessage: null
         };
@@ -29,7 +29,12 @@ module.exports = {
             By using a computed we can render a message whenver
             the currentId property changes, this means if can
             be changed even when click the forward or back button
-            and not just when the compent is first created
+            and not just when the compent is first created.
+
+            This will also be run when the selectedMessage is 
+            changed, so we can keep the selected message up to date
+            when the parent current id is changed or when the selected
+            message is changed.
 
             @return {mixed}
         **/
@@ -37,7 +42,16 @@ module.exports = {
         {
             message = this.getMessageById(this.currentId);
 
-            this.selectedMessage = message;
+            if (message) 
+            {
+                this.selectedMessage = message;
+                this.selectedMessage.read = true;
+            }
+            else 
+            {
+                this.selectedMessage = null;
+            }
+            
             return message;
         }
     },

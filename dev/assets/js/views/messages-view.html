@@ -1,5 +1,11 @@
 <div class="list-group">
-    <a v-repeat="message: messages" v-class="active: selectedMessage && selectedMessage.id == message.id" class="list-group-item" href="#/messages/{{message.id}}" v-on="click: setMessage(message)">{{ message.title }}</a>
+    <a v-repeat="message: messages" v-class="active: selectedMessage && selectedMessage.id == message.id" class="list-group-item clearfix" href="#/messages/{{message.id}}" v-on="click: setMessage(message)">
+        <span class="pull-left">{{ message.title }}</span>
+        <span class="pull-right">
+            <i class="fa fa-folder-o" v-show="message.read == false"></i>
+            <i class="fa fa-folder-open-o" v-show="message.read"></i>
+        </span>
+    </a>
 </div>
 
 <div v-if="selectedMessageComputed">

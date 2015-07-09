@@ -9,3 +9,6 @@ var router = new Router().configure();
 
 // regiester our routes
 var routes = new Routes(app, router);
+
+// Set debug to true or false if needed.
+//Vue.config.debug = true;

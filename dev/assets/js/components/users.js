@@ -38,7 +38,11 @@ module.exports = {
         {
             user = this.getUserById(this.currentId);
 
-            this.selectedUser = user;
+            if (user)
+            {
+                this.selectedUser = user;
+            }
+
             return user;
         }
     },
