@@ -36,18 +36,8 @@ module.exports = {
         **/
         selectedUserComputed: function()
         {
-            user = this.getUserById(this.currentId);
-
-            if (user)
-            {
-                this.selectedUser = user;
-            }
-            else
-            {
-                this.selectedUser = null;
-            }
-
-            return user;
+            this.selectedUser = this.getUserById(this.currentId);
+            return this.selectedUser;
         }
     },
 
