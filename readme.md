@@ -6,7 +6,14 @@
 - History States
 - Compiles Coffeescript
 
-*Resources*
+**Resources**
 - https://github.com/flatiron/director
 - https://github.com/vuejs/vue-hackernews
 - https://laracasts.com/series/learning-vuejs
+
+**Install**
+Demo requires npm and gulp (globally)
+
+Run *npm install* to install dependencies.
+
+Then just launch the web page to view.
