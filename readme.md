@@ -1,4 +1,4 @@
-#Vue example for Kuradocs
+#Vue Demo Application
 
 - Components (using commonjs modules with browserify)
 - Routing
@@ -7,6 +7,6 @@
 - Compiles Coffeescript
 
 *Resources*
-https://github.com/flatiron/director
-https://github.com/vuejs/vue-hackernews
-https://laracasts.com/series/learning-vuejs
+- https://github.com/flatiron/director
+- https://github.com/vuejs/vue-hackernews
+- https://laracasts.com/series/learning-vuejs
