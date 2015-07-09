@@ -1,0 +1,17 @@
+<div class="list-group">
+    <a v-repeat="message: messages" v-class="active: selectedMessage && selectedMessage.id == message.id" class="list-group-item" href="#/messages/{{message.id}}" v-on="click: setMessage(message)">{{ message.title }}</a>
+</div>
+
+<div v-if="selectedMessageComputed">
+    
+    <hr>
+
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">{{ selectedMessageComputed.title }}</h3>
+        </div>
+        <div class="panel-body">
+            {{ selectedMessageComputed.content }}
+        </div>
+    </div>
+</div>
