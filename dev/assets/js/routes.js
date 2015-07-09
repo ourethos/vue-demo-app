@@ -17,6 +17,15 @@ routes = function(app, router) {
         app.currentId = id;
     });
 
+    router.on('/users', function() {
+        app.currentView = 'users';
+    });
+
+    router.on('/users/:id', function(id) {
+        app.currentView = 'users';
+        app.currentId = id;
+    });
+
     /**
         Add any filters, or additional config options,
         this could also be done when initalising in the

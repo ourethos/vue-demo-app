@@ -8,7 +8,8 @@ application = {
 
     components: {
         dashboard: require('./dashboard'),
-        messages: require('./messages')
+        messages: require('./messages'),
+        users: require('./users')
     }
 };
 
