@@ -40,19 +40,15 @@ module.exports = {
         **/
         selectedMessageComputed: function()
         {
-            message = this.getMessageById(this.currentId);
+            this.selectedMessage = this.getMessageById(this.currentId);
 
-            if (message) 
+            if (this.selectedMessage) 
             {
                 this.selectedMessage = message;
                 this.selectedMessage.read = true;
             }
-            else 
-            {
-                this.selectedMessage = null;
-            }
             
-            return message;
+            return this.selectedMessage;
         }
     },
 
