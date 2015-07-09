@@ -1,5 +1,5 @@
 <div class="list-group">
-    <a v-repeat="user: users" v-class="active: selectedUser && selectedUser.id == user.id" class="list-group-item" href="#/users/{{user.id}}" v-on="click: setUser(user)">{{ user.title }}</a>
+    <a v-repeat="user: users" v-class="active: selectedUser && selectedUser.id == user.id" class="list-group-item" href="#/users/{{user.id}}" v-on="click: setUser(user)">{{ userFullName(user) }}</a>
 </div>
 
 <div v-if="selectedUserComputed">
@@ -8,10 +8,19 @@
 
     <div class="panel panel-default">
         <div class="panel-heading">
-            <h3 class="panel-title">{{ selectedUserComputed.title }}</h3>
+            <h3 class="panel-title">{{ userFullName(selectedUserComputed) }}</h3>
         </div>
         <div class="panel-body">
-            {{ selectedUserComputed.content }}
+            <div class="row">
+                <div class="col-sm-8">
+                    {{ selectedUserComputed.about }}
+                </div>
+                <div class="col-sm-2 col-sm-offset-2">
+                    <div class="thumbnail">
+                        <img v-attr="src: selectedUserComputed.profileImage">
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
