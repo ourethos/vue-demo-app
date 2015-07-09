@@ -42,6 +42,10 @@ module.exports = {
             {
                 this.selectedUser = user;
             }
+            else
+            {
+                this.selectedUser = null;
+            }
 
             return user;
         }
